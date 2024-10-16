@@ -2,13 +2,8 @@ package org.example;
 
 import org.example.CoR.Task;
 import org.example.Command.*;
-import org.example.Iterator.TaskIterator;
-import org.example.Iterator.TaskList;
-import org.example.Mediator.Mediator;
-import org.example.Mediator.TaskMediator;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.example.Iterator.*;
+import org.example.Mediator.*;
 
 public class Main {
     public static void main(String[] args) {
