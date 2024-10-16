@@ -1,5 +1,7 @@
 package org.example.Command;
 
+import org.example.CoR.Task;
+
 public class TaskInvoker {
     private Command command;
 
@@ -7,7 +9,7 @@ public class TaskInvoker {
         this.command = command;
     }
 
-    public void execute() {
-        if(command != null) command.execute();
+    public void execute(String taskDesc) {
+        if(command != null) command.execute(taskDesc);
     }
 }

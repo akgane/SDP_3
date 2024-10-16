@@ -1,14 +1,18 @@
 package org.example.Command;
 
-public class LowPriorityCommand implements Command {
-    private TaskReceiver taskReceiver;
+import org.example.CoR.Priority;
+import org.example.CoR.Task;
+import org.example.Mediator.Mediator;
 
-    public LowPriorityCommand(TaskReceiver taskReceiver) {
-        this.taskReceiver = taskReceiver;
+public class LowPriorityCommand implements Command {
+    Mediator mediator;
+
+    public LowPriorityCommand(Mediator mediator) {
+        this.mediator = mediator;
     }
 
     @Override
-    public void execute() {
-        taskReceiver.handleLowPriorityTask();
+    public void execute(String taskDesc) {
+        mediator.handleTask(new Task(Priority.LOW, taskDesc));
     }
 }
